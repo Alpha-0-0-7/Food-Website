@@ -259,12 +259,28 @@ form {
     border: 1px solid black;
 }
 
-/* @media(max-width:850px) {
-    .profile-header {
-        display: none;
+@media(max-width:850px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .grid-container-right {
+        width: 100%;
+    }
+
+    form {
+        width: 85%;
+        justify-content: center;
+    }
+
+    .input2 {
+        width: 95%;
     }
 }
 
+/*
 @media(max-width:550px) {
 
 } */
