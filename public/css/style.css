@@ -549,6 +549,7 @@ label {
     /* 5th part css start */
     .part-five {
         flex-direction: column;
+        margin: 0;
     }
 
     .price-container {
