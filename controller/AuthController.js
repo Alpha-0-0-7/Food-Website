@@ -2,6 +2,8 @@ const userModel = require("../model/userModel");
 const planModel = require("../model/planModel");
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = process.env.JWT_SECRET || require("../Config/secrets").JWT_SECRET;
+const user = process.env.USER || require("../Config/secrets").USER;
+const pass = process.env.PASS || require("../Config/secrets").PASS;
 const nodemailer = require("nodemailer");
 
 module.exports.signup = async function (req, res) {
@@ -18,8 +20,8 @@ module.exports.signup = async function (req, res) {
                 host: "smtp.mailtrap.io",
                 port: 2525,
                 auth: {
-                    user: "5c560e14d8827c",
-                    pass: "e56cb71f7e112e"
+                    user: user,
+                    pass: pass
                 }
             });
             // email options
@@ -139,8 +141,8 @@ module.exports.forgetPassword = async function (req, res) {
                 host: "smtp.mailtrap.io",
                 port: 2525,
                 auth: {
-                    user: "5c560e14d8827c",
-                    pass: "e56cb71f7e112e"
+                    user: user,
+                    pass: pass
                 }
             });
             // email options
